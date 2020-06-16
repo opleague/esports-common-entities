@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
@@ -28,6 +29,7 @@ public class ContestEntity extends ParentEntity  {
 	private int spots;
 	private int NumberOfWinners;
 	private double entryFee;
+	private String termsCondition;
 	
 	@OneToMany(mappedBy = "contest",
 	        cascade = CascadeType.ALL,
@@ -40,6 +42,7 @@ public class ContestEntity extends ParentEntity  {
 		this.spots = contestBean.getSpots();
 		this.NumberOfWinners = contestBean.getNumberOfwinners();	
 		this.entryFee = contestBean.getEntryFee();
+		this.termsCondition = contestBean.getTermCondition();
 	}
 
 	@PrePersist

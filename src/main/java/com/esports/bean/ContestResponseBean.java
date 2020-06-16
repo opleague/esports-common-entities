@@ -19,10 +19,12 @@ public class ContestResponseBean extends ResponseBean {
 		this.spots = contestEntity.getSpots();
 		this.NumberOfwinners = contestEntity.getNumberOfWinners();
 		this.entryFee =  contestEntity.getEntryFee();
+		this.termCondition = contestEntity.getTermsCondition();
 	}
 	private String name;
 	private double winningAmount;
 	private int spots;
 	private int NumberOfwinners;
 	private double entryFee;
+	private String termCondition;
 }

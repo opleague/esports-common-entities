@@ -10,4 +10,5 @@ public class ContestRequestBean {
 	private int spots; // spots
 	private int NumberOfwinners;
 	private double entryFee;
+	private String termCondition;
 }
