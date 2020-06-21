@@ -3,6 +3,7 @@ package com.esports.entities;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,11 +22,18 @@ public class ParentEntity implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Long id;
 	
+	@Column(nullable = false)
 	protected Date createdAt;
+
+	@Column(nullable = false)
 	protected Date updatedAt;
+	
 	protected String createdBy;
+	
 	protected String updatedBy;
+	
 	protected boolean active=true;
+	
 	@Version
     private Integer version;
 }
