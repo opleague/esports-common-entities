@@ -1,8 +1,12 @@
 package com.esports.entities;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,4 +33,14 @@ public class MatchTeamEntity extends ParentEntity{
     public int hashCode() {
         return 31 ;
     }
+    @PrePersist
+    void beforeCreate() {
+        this.createdAt = new Date();
+        this.updatedAt = new Date();
+    }
+
+    @PreUpdate
+    void beforeUpdate() {
+    	this.updatedAt = new Date();
+    } 
 }
