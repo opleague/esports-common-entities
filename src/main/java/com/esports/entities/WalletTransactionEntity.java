@@ -28,7 +28,7 @@ public class WalletTransactionEntity extends ParentEntity  {
 	private Long userId;
 	
 	@Column(name = "transaction_id")
-	private Long transactionId; 
+	private String transactionId; 
 	
 	@PrePersist
     void beforeCreate() {
