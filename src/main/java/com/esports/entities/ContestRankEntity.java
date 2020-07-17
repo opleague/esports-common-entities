@@ -1,18 +1,11 @@
 package com.esports.entities;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
-
-import com.esports.bean.ContestRequestBean;
-import com.esports.bean.MatchRequestBean;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
