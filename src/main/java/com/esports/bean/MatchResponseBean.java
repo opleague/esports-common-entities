@@ -22,4 +22,11 @@ public class MatchResponseBean extends ResponseBean {
 	private String iconUrl;
 	private List<String> teamNames;
 	private String tournamentName;
+	
+	private long startTime;
+	private long endTime;
+	private Long tournamentId;
+	private int credits;
+	private int matchNumber;
+	private String matchMap;
 }
